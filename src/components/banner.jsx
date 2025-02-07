@@ -27,18 +27,18 @@ const Banner = () => {
                 />
                 <div>
                     <button className="btn btn-outline text-lg mt-5 p-6 text-[#a3a5ac] rounded-full">Get Resume</button>
-                    <div className="mt-10">
-                        <button className="btn btn-circle mr-5 shadow-lg shadow-blue-500/50">
-                            <FaLinkedin />
+                    <div className="mt-10 ">
+                        <button className="btn btn-circle mr-5 shadow-lg shadow-blue-500/70">
+                            <FaLinkedin className="text-xl"/>
                         </button>
-                        <button className="btn btn-circle mr-5 shadow-lg shadow-gray-500/50">
-                            <FaGithubSquare />
+                        <button className="btn btn-circle mr-5 shadow-lg shadow-blue-500/70">
+                            <FaGithubSquare className="text-xl"/>
                         </button>
-                        <button className="btn btn-circle mr-5 shadow-lg shadow-blue-400/50">
-                            <FaFacebook />
+                        <button className="btn btn-circle mr-5 shadow-lg shadow-blue-400/70">
+                            <FaFacebook className="text-xl"/>
                         </button>
-                        <button className="btn btn-circle shadow-lg shadow-gray-400/50">
-                            <FaXTwitter />
+                        <button className="btn btn-circle shadow-lg shadow-blue-500/70">
+                            <FaXTwitter className="text-xl"/>
                         </button>
                     </div>
 
