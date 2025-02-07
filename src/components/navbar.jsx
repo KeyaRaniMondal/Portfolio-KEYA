@@ -18,7 +18,11 @@ const NavBar = () => {
         document.getElementById("edu")?.scrollIntoView({ behavior: "smooth" });
       }} className="px-3 py-2 hover:text-[#143D60]">Educational Qualification</NavLink>
 
-      <NavLink to="/projects" className="px-3 py-2 hover:text-[#143D60]">Projects</NavLink>
+      <NavLink to="/" onClick={(e) => {
+        e.preventDefault();
+        document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
+      }} className="px-3 py-2 hover:text-[#143D60]">Projects</NavLink>
+
       <NavLink to="/contact" className="px-3 py-2 hover:text-[#143D60]">Connect with Me</NavLink>
     </>
   );

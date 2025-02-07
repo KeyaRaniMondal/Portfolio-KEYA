@@ -3,6 +3,7 @@ import Banner from './components/banner'
 import NavBar from './components/navbar'
 import AboutMe from './pages/aboutMe'
 import Education from './pages/education'
+import Project from './pages/project'
 import Skills from './pages/skills'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   <AboutMe ></AboutMe>
   <Skills></Skills>
   <Education></Education>
+  <Project></Project>
     </div>
   )
 }
