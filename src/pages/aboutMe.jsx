@@ -2,7 +2,7 @@ import { FaBook, FaBrain, FaPaintBrush } from 'react-icons/fa';
 import img from '../assets/k.jpg'
 const AboutMe = () => {
     return (
-        <div className="w-full bg-[#1A2A33] text-white py-16 px-5 md:px-16 lg:px-28">
+        <div id='about' className=" w-full bg-[#1A2A33] text-white py-16 px-5 md:px-16 lg:px-28">
 
             <h2 className="text-4xl sm:text-5xl font-bold text-center mb-8 text-gradient">
                 About Me

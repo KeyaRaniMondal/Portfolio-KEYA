@@ -3,9 +3,21 @@ import { NavLink } from "react-router";
 const NavBar = () => {
   const link = (
     <>
-      <NavLink to="/about" className="px-3 py-2 hover:text-[#143D60]">About Me</NavLink>
-      <NavLink to="/skills" className="px-3 py-2 hover:text-[#143D60]">Skills</NavLink>
-      <NavLink to="/education" className="px-3 py-2 hover:text-[#143D60]">Educational Qualification</NavLink>
+      <NavLink to="/" onClick={(e) => {
+        e.preventDefault();
+        document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+      }} className="px-3 py-2 hover:text-[#143D60]">About Me</NavLink>
+
+      <NavLink to="/" onClick={(e) => {
+        e.preventDefault();
+        document.getElementById("skill")?.scrollIntoView({ behavior: "smooth" });
+      }} className="px-3 py-2 hover:text-[#143D60]">Skills</NavLink>
+
+      <NavLink to="/" onClick={(e) => {
+        e.preventDefault();
+        document.getElementById("edu")?.scrollIntoView({ behavior: "smooth" });
+      }} className="px-3 py-2 hover:text-[#143D60]">Educational Qualification</NavLink>
+
       <NavLink to="/projects" className="px-3 py-2 hover:text-[#143D60]">Projects</NavLink>
       <NavLink to="/contact" className="px-3 py-2 hover:text-[#143D60]">Connect with Me</NavLink>
     </>

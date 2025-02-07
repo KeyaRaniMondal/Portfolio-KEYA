@@ -11,7 +11,7 @@ import express from '../assets/express.jpg'
 import mongodb from '../assets/mongodb.jpg'
 const Skills = () => {
     return (
-        <div className='w-full bg-[#13232c] text-white py-16 px-5 md:px-16 lg:px-28'>
+        <div id='skill' className='w-full bg-[#13232c] text-white py-16 px-5 md:px-16 lg:px-28'>
             <h2 className="text-5xl font-bold text-white mt-28">My Skill-Set</h2>
             <h2 className="text-3xl text-left mt-32 text-white mb-10">Frontend Development</h2>
             <div className="flex justify-around gap-5">

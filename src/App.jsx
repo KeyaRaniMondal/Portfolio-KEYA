@@ -2,6 +2,7 @@ import './App.css'
 import Banner from './components/banner'
 import NavBar from './components/navbar'
 import AboutMe from './pages/aboutMe'
+import Education from './pages/education'
 import Skills from './pages/skills'
 
 function App() {
@@ -10,8 +11,9 @@ function App() {
     <div className='w-full'>
   <NavBar></NavBar>
   <Banner></Banner>
-  <AboutMe></AboutMe>
+  <AboutMe ></AboutMe>
   <Skills></Skills>
+  <Education></Education>
     </div>
   )
 }
