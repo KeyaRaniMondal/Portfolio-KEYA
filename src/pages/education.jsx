@@ -1,6 +1,6 @@
 const Education = () => {
     return (
-        <div id="edu">
+        <div id="edu" >
             <h2 className="text-5xl text-white mt-28 mb-20">Educational Qualification</h2>
             <ul className=" text-left timeline timeline-snap-icon max-md:timeline-compact timeline-vertical text-white items-start -ml-[150px] w-[1000px]">
 

@@ -23,7 +23,10 @@ const NavBar = () => {
         document.getElementById("project")?.scrollIntoView({ behavior: "smooth" });
       }} className="px-3 py-2 hover:text-[#143D60]">Projects</NavLink>
 
-      <NavLink to="/contact" className="px-3 py-2 hover:text-[#143D60]">Connect with Me</NavLink>
+      <NavLink to="/" onClick={(e) => {
+        e.preventDefault();
+        document.getElementById("connect")?.scrollIntoView({ behavior: "smooth" });
+      }} className="px-3 py-2 hover:text-[#143D60]">Connect with Me</NavLink>
     </>
   );
 
@@ -51,8 +54,8 @@ const NavBar = () => {
               {link}
             </ul>
           </div>
-          <NavLink to="/contact" className="btn bg-white text-[#143D60] border-[#143D60] hover:bg-[#143D60] hover:text-white">
-            Contact Me
+          <NavLink to="https://drive.google.com/file/d/1V5XOvSxNMd5bZiMQh9f8HdZEiSgilfgd/view?usp=drive_link" target="_blank" className="btn bg-white text-[#143D60] border-[#143D60] hover:bg-[#143D60] hover:text-white">
+            Get Resume
           </NavLink>
         </div>
       </nav>
