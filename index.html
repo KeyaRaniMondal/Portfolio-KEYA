@@ -6,6 +6,7 @@
 <title>Keya Rani Mondal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 <style>
 :root {
   --bg:       #0f0e0c;
@@ -228,6 +229,95 @@ nav.scrolled{padding:1.1rem 5rem}
     transform: translateY(-3px);
     /* background: #a28c0a; */
     background:var(--gold);
+}
+
+/* tools */
+.skills-section{
+  padding: 1.5rem 5rem 0;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:1.2rem;
+  margin-top:1rem;
+}
+
+.skill-card{
+  position:relative;
+  padding:1.35rem 1.35rem 1.2rem;
+  background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.025));
+  border:1px solid var(--border);
+  border-radius:20px;
+  overflow:hidden;
+  backdrop-filter:blur(10px);
+}
+
+.skill-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg,rgba(196,154,60,.08),transparent 55%);
+  pointer-events:none;
+}
+
+.sg-lbl{
+  position:relative;
+  z-index:1;
+  font-family:var(--mono);
+  font-size:.64rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--gold);
+  margin-bottom:.95rem;
+}
+
+.pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+  position:relative;
+  z-index:1;
+}
+
+.pill{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .65rem .95rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.08);
+    background: rgba(17,24,39,.72);
+    color: var(--ink2);
+    font-family: var(--mono);
+    font-size: .62rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    transition: all .3s ease;
+}
+
+.pill i{
+    font-size: 1rem;
+}
+
+.pill:hover{
+    transform: translateY(-3px);
+    color: var(--ink);
+    border-color: rgba(196,154,60,.3);
+    background: rgba(196,154,60,.12);
+    box-shadow: 0 8px 22px rgba(196,154,60,.16);
+}
+
+.pill.hi{
+    font-weight: 600;
+    color: var(--ink);
+    background: rgba(196,154,60,.14);
+    border-color: rgba(196,154,60,.28);
+}
+
+@media (max-width: 768px){
+  .skills-section{padding:1.2rem 1.4rem 0}
+  .skills-grid{grid-template-columns:1fr;gap:1rem}
 }
 
 /* Hero card */
@@ -680,7 +770,61 @@ footer span{color:var(--gold)}
 </section>
 
 <!-- tools &technologies -->
-    <div class="skills-col reveal d2">
+<section class="sec skills-section" id="tools">
+  <div class="sec-hd reveal">
+    <div class="sec-idx">02 — Tools &amp; Technologies</div>
+    <h2 class="sec-title">Crafting with <em>modern tools</em></h2>
+  </div>
+
+  <div class="skills-grid reveal">
+    <div class="skill-card">
+      <div class="sg-lbl">Frontend</div>
+      <div class="pills">
+        <span class="pill hi"><i class="devicon-react-original"></i> React.js</span>
+        <span class="pill"><i class="devicon-javascript-plain"></i> JavaScript</span>
+        <span class="pill">🐻 Zustand</span>
+        <span class="pill"><i class="devicon-tailwindcss-original"></i> Tailwind CSS</span>
+        <span class="pill"><i class="devicon-html5-plain"></i> HTML5</span>
+        <span class="pill"><i class="devicon-css3-plain"></i> CSS3</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="sg-lbl">Backend</div>
+      <div class="pills">
+        <span class="pill hi"><i class="devicon-nodejs-plain"></i> Node.js</span>
+        <span class="pill"><i class="devicon-express-original"></i> Express.js</span>
+        <span class="pill">🔌 REST APIs</span>
+        <span class="pill">⚡ Socket.io</span>
+        <span class="pill">🔐 JWT Auth</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="sg-lbl">Database &amp; Tools</div>
+      <div class="pills">
+        <span class="pill hi"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+        <span class="pill"><i class="devicon-mongoose-original"></i> Mongoose</span>
+        <span class="pill"><i class="devicon-git-plain"></i> Git</span>
+        <span class="pill"><i class="devicon-github-original"></i> GitHub</span>
+        <span class="pill">📮 Postman</span>
+        <span class="pill"><i class="devicon-vscode-plain"></i> VS Code</span>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="sg-lbl">CS Fundamentals</div>
+      <div class="pills">
+        <span class="pill"><i class="devicon-cplusplus-plain"></i> C++</span>
+        <span class="pill"><i class="devicon-python-plain"></i> Python</span>
+        <span class="pill"><i class="devicon-javascript-plain"></i> JavaScript</span>
+        <span class="pill">💻 DSA</span>
+        <span class="pill">🖥️ OS Concepts</span>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- <div class="skills-col reveal d2">
       <div>
         <div class="sg-lbl">Frontend</div>
         <div class="pills">
@@ -711,7 +855,7 @@ footer span{color:var(--gold)}
           <span class="pill">C++</span><span class="pill">Python</span>
           <span class="pill">Javascript</span><span class="pill">OS Concepts</span>
         </div>
-      </div>
+      </div> -->
 
 <!-- PROJECTS -->
 <section class="sec sec-alt" id="projects">
