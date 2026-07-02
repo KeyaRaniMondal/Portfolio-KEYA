@@ -1,0 +1,14 @@
+.p-detail{
+    background: transparent;
+    border: 1px solid rgba(196,154,60,.3);
+    padding: .8rem 1.2rem;
+    border-radius: 999px;
+    transition: all .3s ease;
+}
+
+.p-detail:hover{
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 12px rgba(196,154,60,.2),
+        0 0 24px rgba(196,154,60,.1);
+}
