@@ -195,6 +195,41 @@ nav.scrolled{padding:1.1rem 5rem}
 }
 .btn-ghost:hover{border-color:var(--ink2);color:var(--ink);transform:translateY(-2px)}
 
+/* social media icons */
+.social-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 1.5rem;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #1f2937; /* dark background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border:1.5px solid var(--gold);
+}
+
+.social-icon svg {
+    width: 22px;
+    height: 22px;
+    
+    /* border-color:var(--gold); */
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    /* background: #a28c0a; */
+    background:var(--gold);
+}
+
 /* Hero card */
 .h-card{
   background:var(--surface);border:1px solid var(--border);
@@ -261,39 +296,61 @@ nav.scrolled{padding:1.1rem 5rem}
 .sec-title em{font-style:italic;color:var(--gold)}
 
 /* ─── ABOUT ─────────────────────────────── */
-.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start}
-.about-txt p{color:var(--ink2);font-size:.97rem;line-height:1.9;margin-bottom:1.4rem}
-.about-txt p strong{color:var(--ink);font-weight:400}
-
-.uni-card{
-  display:flex;gap:1rem;align-items:flex-start;
-  background:var(--surface);border:1px solid var(--border);
-  padding:1.4rem 1.6rem;margin-top:2rem;
-}
-.uni-ico{font-size:1.3rem;flex-shrink:0;margin-top:.1rem}
-.uni-nm{
-  font-family:var(--serif);font-size:1rem;font-weight:600;
-  color:var(--ink);margin-bottom:.25rem;
-}
-.uni-dt{
-  font-family:var(--mono);font-size:.59rem;
-  color:var(--ink3);letter-spacing:.1em;text-transform:uppercase;
+.about-card,
+.education-card{
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:2rem;
+  background:none;
+  box-shadow:none;
 }
 
-.skills-col{display:flex;flex-direction:column;gap:1.7rem}
-.sg-lbl{
-  font-family:var(--mono);font-size:.59rem;
-  color:var(--ink3);letter-spacing:.16em;text-transform:uppercase;margin-bottom:.7rem;
+.edu-content{
+  background:none;
+  padding:1rem 1.1rem;
+  border-radius:16px;
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:none;
+  transition:all .35s ease;
 }
-.pills{display:flex;flex-wrap:wrap;gap:.4rem}
-.pill{
-  font-family:var(--mono);font-size:.66rem;letter-spacing:.05em;
-  padding:.35rem .8rem;
-  border:1px solid var(--border);color:var(--ink2);background:transparent;
-  transition:all .22s;
+.edu-content:hover{
+  transform:translateY(-6px) scale(1.02);
+  border-color:rgba(196,154,60,.45);
+  box-shadow:
+    0 0 12px rgba(196,154,60,.18),
+    0 0 24px rgba(196,154,60,.12),
+    0 0 40px rgba(196,154,60,.08);
 }
-.pill:hover,.pill.hi{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
-
+.dot{
+  position:absolute;
+  top:1rem;
+  width:15px;
+  height:15px;
+  border-radius:50%;
+  background:var(--gold2);
+  border:3px solid var(--bg);
+  box-shadow:
+    0 0 8px rgba(196,154,60,.4),
+    0 0 16px rgba(196,154,60,.25);
+  animation:pulseGlow 2.5s infinite;
+}
+@keyframes pulseGlow{
+  0%{
+    box-shadow:
+      0 0 8px rgba(196,154,60,.3),
+      0 0 16px rgba(196,154,60,.15);
+  }
+  50%{
+    box-shadow:
+      0 0 16px rgba(196,154,60,.5),
+      0 0 32px rgba(196,154,60,.25);
+  }
+  100%{
+    box-shadow:
+      0 0 8px rgba(196,154,60,.3),
+      0 0 16px rgba(196,154,60,.15);
+  }
+}
 /* ─── PROJECTS ──────────────────────────── */
 .proj-stack{display:flex;flex-direction:column;gap:2px}
 
@@ -487,12 +544,42 @@ footer span{color:var(--gold)}
     </p>
     <div class="h-btns">
       <a href="#projects" class="btn btn-gold">View My Work</a>
-      <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+            <a href="https://drive.google.com/file/d/1GRsYSRxjw6RdofLEVqu64HFM1hKd92SO/view?usp=sharing" class="btn btn-ghost">Download Resume</a>
     </div>
+<section class="social-section">
+  <a href="https://github.com/KeyaRaniMondal" target="_blank" class="social-icon">
+    <!-- GitHub -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+    </svg>
+  </a>
+
+  <a href="https://www.linkedin.com/in/keya-rani-mondal-75a707285/" target="_blank" class="social-icon">
+    <!-- LinkedIn -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/>
+      <circle cx="4" cy="4" r="2"/>
+    </svg>
+  </a>
+
+  <a href="https://www.facebook.com/keya.rani.mondal.2024/" target="_blank" class="social-icon">
+    <!-- Facebook -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z"/>
+    </svg>
+  </a>
+
+  <a href="https://x.com/kumari_keya" target="_blank" class="social-icon">
+    <!-- Twitter/X -->
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M18.9 2H22l-6.8 7.8L23 22h-6.2l-4.9-6.4L6.4 22H3.3l7.3-8.3L1 2h6.3l4.4 5.8L18.9 2z"/>
+    </svg>
+  </a>
+</section>
   </div>
-  <div class="hero-r">
+  <div class="hero-r" style="margin-right:12rem;">
     <div class="hero-portrait">
-      <img src="me.jpg" alt="Portrait of Your Name">
+      <img src="me.png" alt="Portrait of Your Name">
     </div>
     <div class="h-card">
       <div class="card-lbl">At A Glance</div>
@@ -511,7 +598,7 @@ footer span{color:var(--gold)}
         </div>
        
       </div>
-      <div class="avail"><span class="avail-dot"></span>Open to internships</div>
+      <div class="avail"><span class="avail-dot"></span>Open to internships or full-time opportunities</div>
     </div>
   </div>
 </section>
@@ -528,26 +615,71 @@ footer span{color:var(--gold)}
     <div class="sec-idx">01 — About</div>
     <h2 class="sec-title">Who I <em>Am</em></h2>
   </div>
-  <div class="about-grid">
-    <div class="about-txt reveal">
-      <p>I'm a final-semester <strong>BSc Computer Science &amp; Engineering</strong> student
-      passionate about building products that are both technically rigorous and delightful to use.
-      My work sits at the intersection of clean architecture and thoughtful user experience.</p>
-      <p>My expertise centres on the <strong>MERN stack</strong> — from designing MongoDB schemas
-      and crafting Express APIs, to building responsive React UIs with seamless auth flows
-      and state management.</p>
-      <p>Beyond web development, I invest deeply in <strong>Data Structures &amp; Algorithms</strong>,
-      solving problems in C++ and javascript, treating algorithmic thinking as the craft behind the craft
-      — not just interview preparation.</p>
-      <div class="uni-card">
-        <div class="uni-ico">🎓</div>
-        <div>
-          <div class="uni-nm">Varendra University</div>
-          <div class="uni-dt" style="margin-bottom:.3rem">BSc in Computer Science &amp; Engineering</div>
-          <div class="uni-dt">2022 – 2026 &nbsp;·&nbsp; Final Semester</div>
+
+  <div class="about-stack">
+    <div class="about-card reveal">
+      <p>
+        I’m a final-semester <strong>BSc in Computer Science &amp; Engineering</strong>
+        student who loves turning ideas into polished digital products. My interest in
+        technology started with simple curiosity about how websites and apps work,
+        and it grew into a passion for building thoughtful, user-focused solutions.
+      </p>
+
+      <p>
+        Over time, I’ve built strong experience with the <strong>MERN stack</strong>,
+        from designing databases in MongoDB to creating responsive interfaces with
+        React and supporting them with Node.js and Express.js APIs.
+      </p>
+
+      <p>
+        I also spend a lot of time strengthening my <strong>Data Structures &amp; Algorithms</strong>
+        skills in C++ and JavaScript, which helps me write cleaner and more efficient code.
+      </p>
+
+      <div class="about-highlights">
+        <span>MERN Stack</span>
+        <span>DSA Practice</span>
+        <span>Problem Solving</span>
+        <span>Responsive UI</span>
+      </div>
+    </div>
+
+    <div class="education-card reveal">
+      <h3>Education</h3>
+
+      <div class="timeline">
+        <div class="edu-item">
+          <div class="dot"></div>
+          <div class="edu-content">
+            <h4>Varendra University</h4>
+            <p>BSc in Computer Science &amp; Engineering</p>
+            <span>2022 – 2026 · Final Semester</span>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="dot"></div>
+          <div class="edu-content">
+            <h4>Higher Secondary Certificate</h4>
+            <p>Science Group</p>
+            <span>2018 – 2020</span>
+          </div>
+        </div>
+
+        <div class="edu-item">
+          <div class="dot"></div>
+          <div class="edu-content">
+            <h4>Secondary School Certificate</h4>
+            <p>Science Group</p>
+            <span>2016 – 2018</span>
+          </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- tools &technologies -->
     <div class="skills-col reveal d2">
       <div>
         <div class="sg-lbl">Frontend</div>
@@ -580,9 +712,6 @@ footer span{color:var(--gold)}
           <span class="pill">Javascript</span><span class="pill">OS Concepts</span>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
 <!-- PROJECTS -->
 <section class="sec sec-alt" id="projects">
