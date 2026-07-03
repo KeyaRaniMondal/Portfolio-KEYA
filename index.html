@@ -450,7 +450,7 @@
       background: rgba(17, 24, 39, .72);
       color: var(--ink2);
       font-family: var(--mono);
-      font-size: .6rem;
+      font-size: .80rem;
       letter-spacing: .05em;
       text-transform: uppercase;
       transition: all .3s ease;
@@ -783,7 +783,7 @@
 
     .edu-content span {
       font-family: var(--mono);
-      font-size: .6rem;
+      font-size: .70rem;
       color: var(--ink3);
       letter-spacing: .06em
     }
@@ -1253,6 +1253,7 @@
     }
 
     @media (max-width: 960px) {
+
       nav,
       nav.scrolled {
         padding: 1.2rem 2rem;
@@ -1336,6 +1337,7 @@
     }
 
     @media (max-width: 680px) {
+
       nav,
       nav.scrolled {
         padding: 1rem 1.2rem;
@@ -1466,20 +1468,21 @@
         font-size: 2.2rem;
       }
     }
-    #changing-role{
-    display:inline-block;
-    transition:opacity .4s ease, transform .4s ease;
-}
 
-#changing-role.fade-out{
-    opacity:0;
-    transform:translateY(-8px);
-}
+    #changing-role {
+      display: inline-block;
+      transition: opacity .4s ease, transform .4s ease;
+    }
 
-#changing-role.fade-in{
-    opacity:1;
-    transform:translateY(0);
-}
+    #changing-role.fade-out {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+
+    #changing-role.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 
@@ -1506,8 +1509,8 @@
   <section id="hero">
     <div class="hero-l" style="margin-top: -20rem;">
       <div class="h-eyebrow">
-    <span id="changing-role">Software Engineer</span>
-</div>
+        <span id="changing-role">Software Engineer</span>
+      </div>
       <h1 class="h-name"><em>Keya Rani Mondal</em></h1>
       <p class="h-role">BSc. Computer Science &amp; Engineering &nbsp;</p>
       <p class="h-bio">
@@ -1515,7 +1518,7 @@
         thoughtfully crafted — specializing in <strong>Modern Technologies</strong>.
       </p>
       <div class="h-btns">
-        <a href="#projects" class="btn btn-gold">View My Work</a>
+        <a href="#projects" class="btn btn-gold" style="font-weight:bold;">View My Work</a>
         <a href="https://drive.google.com/file/d/1GRsYSRxjw6RdofLEVqu64HFM1hKd92SO/view?usp=sharing"
           class="btn btn-ghost">Download Resume</a>
       </div>
@@ -1591,41 +1594,44 @@
     </div>
 
     <div class="about-stack">
-      <div class="about-card reveal" style="margin-top: -3rem;">
-       <p>
-  I’ve recently completed my <strong>BSc in Computer Science &amp; Engineering</strong>
-  and am passionate about building modern, scalable web applications. What started as
-  curiosity about how websites and software work has grown into a strong interest in
-  developing thoughtful, user-focused digital products that solve real-world problems.
-</p>
+      <div class="about-card reveal" style="margin-top: -3rem; margin-bottom: -2rem;">
+        <p>
+          I’ve recently completed my <strong>BSc in Computer Science &amp; Engineering</strong>
+          and am passionate about building modern, scalable web applications. What started as
+          curiosity about how websites and software work has grown into a strong interest in
+          developing thoughtful, user-focused digital products that solve real-world problems.
+        </p>
 
-<p>
-  My primary expertise is in the <strong>MERN stack</strong>, where I build responsive,
-  full-stack applications using React, Node.js, Express.js, and MongoDB. I'm currently
-  learning <strong>TypeScript, Prisma ORM, and PostgreSQL</strong> to deepen my backend
-  development skills and build more scalable, production-ready applications.
-</p>
+        <p>
+          My primary expertise is in the <strong>MERN stack</strong>, where I build responsive,
+          full-stack applications using React, Node.js, Express.js, and MongoDB. I'm currently
+          learning <strong>TypeScript, Prisma ORM, and PostgreSQL</strong> to deepen my backend
+          development skills and build more scalable, production-ready applications.
+        </p>
 
-<p>
-  I also enjoy strengthening my <strong>Data Structures &amp; Algorithms</strong> skills
-  in C++ and JavaScript, which helps me write clean, efficient code and develop strong
-  problem-solving abilities.
-</p>
+        <p>
+          I also enjoy strengthening my <strong>Data Structures &amp; Algorithms</strong> skills
+          in C++ and JavaScript, which helps me write clean, efficient code and develop strong
+          problem-solving abilities.
+        </p>
 
         <div class="about-highlights">
-          <span>MERN Stack</span>
+          <span>FULL-STACK</span>
           <span>DSA Practice</span>
           <span>Problem Solving</span>
           <span>Responsive UI</span>
         </div>
       </div>
+       </section>
       <!-- skills -->
       <!-- tools &technologies -->
-      <section class="sec sec-alt" id="tools">
-        <div class="sec-hd reveal">
-          <h2 class="sec-title">Crafting with <em>modern tools</em></h2>
-        </div>
 
+      <section class="sec sec-alt" id="tools">
+        <div class="container">
+          <div class="sec-hd reveal">
+            <h2 class="sec-title">Crafting with <em>modern tools</em></h2>
+          </div>
+        </div>
         <div class="skills-grid reveal">
           <div class="skill-card">
             <div class="sg-lbl">Frontend</div>
@@ -1678,8 +1684,9 @@
       </section>
 
       <!-- education -->
-      <div id="education" class="education-card reveal d2" style="margin-top:3rem">
-                <div class="sec-hd reveal">
+       <section class="sec">
+              <div id="education" class="education-card reveal d2" style="margin-top:-2rem">
+        <div class="sec-hd reveal">
           <h2 class="sec-title"><em>Education</em></h2>
         </div>
         <div class="timeline">
@@ -1709,15 +1716,17 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+       </section>
+
+    <!-- </div> -->
+ 
 
 
   <!-- PROJECTS -->
-  <section class="sec" id="projects" style="margin-top: -8rem;">
+  <section class="sec sec-alt" id="projects" style="margin-top: -6rem; margin-bottom: 6rem;">
     <div class="container">
       <div class="sec-hd reveal">
-        <h2 class="sec-title"> <em>Projects</em></h2>
+        <h2 class="sec-title" style="margin-top: -2rem;"> <em>Projects</em></h2>
       </div>
 
       <div class="projects-grid">
@@ -1856,7 +1865,7 @@
           </div>
           <span class="soc-arr">→</span>
         </a>
-<a href="tel:+8801722635719" class="soc-item">
+        <a href="tel:+8801722635719" class="soc-item">
           <div class="soc-l">
             <div class="soc-ico">📞</div>
             <div>
@@ -1886,23 +1895,23 @@
 
   <script>
     const roles = [
-  "Software Engineer",
-  "Full-Stack Web Developer",
-  "Frontend Developer",
-  "Backend Developer",
-  "Prompt Engineer"
-];
+      "Software Engineer",
+      "Full-Stack Web Developer",
+      "Frontend Developer",
+      "Backend Developer",
+      "Prompt Engineer"
+    ];
 
-const roleElement = document.getElementById("changing-role");
+    const roleElement = document.getElementById("changing-role");
 
-let current = 0;
+    let current = 0;
 
-setInterval(() => {
+    setInterval(() => {
 
-    roleElement.classList.remove("fade-in");
-    roleElement.classList.add("fade-out");
+      roleElement.classList.remove("fade-in");
+      roleElement.classList.add("fade-out");
 
-    setTimeout(() => {
+      setTimeout(() => {
 
         current = (current + 1) % roles.length;
 
@@ -1911,9 +1920,9 @@ setInterval(() => {
         roleElement.classList.remove("fade-out");
         roleElement.classList.add("fade-in");
 
-    },200);
+      }, 200);
 
-},1500);
+    }, 1500);
     /* Cursor */
     const dot = document.getElementById('cdot'), ring = document.getElementById('cring');
     let mx = 0, my = 0, rx = 0, ry = 0;
